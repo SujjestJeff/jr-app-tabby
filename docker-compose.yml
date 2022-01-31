@@ -1,0 +1,13 @@
+version: '3'
+services:
+  terminator:
+    user: root
+    image: jr-app-tabby
+    environment:
+     - DISPLAY_WIDTH=1280
+     - DISPLAY_HEIGHT=720
+     - KEEP_APP_RUNNING=1
+    volumes:
+      - ~/tabby:/app/:rw
+    ports:
+     - 8004:5800
